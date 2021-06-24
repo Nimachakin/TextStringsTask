@@ -1,0 +1,17 @@
+@model Dictionary<string, string>
+
+@if(Model.Count == 0)
+{
+    <h2>Ни для одной из русских строк не было найдено <br /> соответствующих по индексу английских строк</h2>  
+}
+else
+{
+    foreach (var matchResult in Model)
+    {
+        <div class="row">
+            <span class="col-md-2">Для строки:</span>
+            <span class="col-md-5">@matchResult.Key</span>
+            <textarea class="col-md-5" rows="3" disabled>@matchResult.Value</textarea>
+        </div>    
+    }
+}

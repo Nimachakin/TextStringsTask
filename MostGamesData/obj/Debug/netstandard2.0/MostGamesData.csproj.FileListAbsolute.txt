@@ -1,0 +1,4 @@
+E:\Projects\ТЕСТОВЫЕ\MostGamesTasks\MostGamesData\obj\Debug\netstandard2.0\MostGamesData.csprojAssemblyReference.cache
+E:\Projects\ТЕСТОВЫЕ\MostGamesTasks\MostGamesData\obj\Debug\netstandard2.0\MostGamesData.AssemblyInfoInputs.cache
+E:\Projects\ТЕСТОВЫЕ\MostGamesTasks\MostGamesData\obj\Debug\netstandard2.0\MostGamesData.AssemblyInfo.cs
+E:\Projects\ТЕСТОВЫЕ\MostGamesTasks\MostGamesData\obj\Debug\netstandard2.0\MostGamesData.csproj.CoreCompileInputs.cache

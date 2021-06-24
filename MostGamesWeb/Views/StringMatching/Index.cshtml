@@ -1,0 +1,45 @@
+@{
+    ViewData["Title"] = "Сопоставление строк";
+}
+
+<link rel="stylesheet" type="text/css" href="~/css/stringsMatching.css" />
+
+<div class="row">
+    <input id="ruStringInput" type="text" class="form-control col-md-6" placeholder="Введите текст на русском языке" />
+    <input id="ruIndexBtn" type="button" class="btn btn-info col-md-2 offset-md-1" value="Индекс Петренко" />
+    <input type="text" id="ruIndexResult" class="col-md-3" disabled />
+</div>
+
+<hr />
+
+<form id="fileForm" asp-action="CompareFileTexts" asp-controller="StringMatch" method="POST" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+
+    <div class="form-group row">
+        <label class="control-label col-md-4">Загрузите txt-файл с русским текстом</label>
+        <div class="col-md-2">
+            <input id="ruTextFileInputBtn" type="button" 
+                class="btn btn-primary form-control" value="Выбрать файл" />
+            <input id="ruTextFileInput" name="ruTextFile" type="file" hidden /> 
+        </div>        
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-4">Загрузите txt-файл с английским текстом</label>
+        <div class="col-md-2">
+            <input id="enTextFileInputBtn" type="button" 
+                class="btn btn-primary form-control" value="Выбрать файл" />
+            <input id="enTextFileInput" name="enTextFile" type="file" hidden /> 
+        </div>        
+    </div>
+
+    <input id="matchTextsBtn" type="submit" class="btn btn-info" value="Сопоставить строки" />
+</form>
+
+
+<div id="resultsBlock"></div>
+
+@section Scripts
+{
+    <script type="text/javascript" src="~/js/stringsMatching.js"></script>
+}

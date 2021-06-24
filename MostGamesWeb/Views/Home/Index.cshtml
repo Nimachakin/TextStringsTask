@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Анализ строк";
+}
+
+<link rel="stylesheet" type="text/css" href="~/css/textStrings.css" />
+
+<div class="row">
+    <label class="col-md-3">Идентификаторы строк:</label>
+    <input id="stringsInput" type="text" class="form-control col-md-6" placeholder="Введите номера строк текста (целые значения от 1 до 20)" />
+    <input id="countBtn" type="button" class="btn btn-info col-md-2 offset-md-1" value="Подсчитать" />
+</div>
+<div id="errorsDiv" class="row" style="display:none">
+    <label class="col-md-3">Некорректный ввод:</label>
+    <span class="col-md-6">You can not see me now!</span>
+</div>
+
+<div class="row">
+    <table id="resultsTable" cellpadding="10px" class="col-md-12">
+        <thead>
+            <th class="text-center"><strong>Текст</strong></th>
+            <th class="text-center"><strong>Количество слов</strong></th>
+            <th class="text-center"><strong>Количество гласных</strong></th>
+        </thead>
+        <tbody>
+        </tbody>        
+    </table>
+</div>
+
+@section Scripts
+{
+    <script type="text/javascript" src="~/js/textStrings.js"></script>
+}
